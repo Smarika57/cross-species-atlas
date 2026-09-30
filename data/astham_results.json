@@ -1,0 +1,34 @@
+{
+  "disease": "Astham",
+  "ontology": {
+    "disease_id": "MONDO:0005359",
+    "organ_id": "UBERON:0002107",
+    "human_taxonomy": "NCBITaxon:9606",
+    "mouse_taxonomy": "NCBITaxon:10090",
+    "api_source": "STATIC_FALLBACK"
+  },
+  "composite_tfi": 64.5,
+  "signature_subscore": 78.2,
+  "integration_subscore": 32.5,
+  "flag": "BORDERLINE",
+  "evidence_tier": "A",
+  "studies_count": 3,
+  "sample_size": 24,
+  "platforms": [
+    "10x Chromium"
+  ],
+  "target_genes": [
+    {
+      "gene": "TNF",
+      "human_log2fc": 2.0,
+      "mouse_log2fc": 1.8,
+      "fidelity": "Concordant"
+    },
+    {
+      "gene": "IL6",
+      "human_log2fc": 1.7,
+      "mouse_log2fc": 0.2,
+      "fidelity": "Discordant"
+    }
+  ]
+}
