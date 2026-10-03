@@ -1,0 +1,14 @@
+{
+  "dataset_id": "DS_KIDNEY_002",
+  "disease_mondo": "MONDO:0005301",
+  "disease_label": "Diabetic Kidney Disease",
+  "organ_uberon": "UBERON:0002113",
+  "organ_label": "Kidney",
+  "species_ncbi": "NCBITaxon:10090",
+  "species_label": "Mus musculus",
+  "fidelity_metrics": {
+    "gene_orthology_concordance": 0.88,
+    "cell_type_mapping_score": 0.82,
+    "pathway_preservation_index": 0.79
+  }
+}
