@@ -1,6 +1,58 @@
 import streamlit as st
 st.markdown('''
 <style>
+/* Remove default margin padding */
+.block-container {
+    padding-top: 2rem !important;
+}
+
+/* Base Portal Background with subtle single-cell / genomic grid overlay */
+.stApp {
+    background-color: #FAFAFA !important;
+    background-image: 
+        radial-gradient(circle at 15% 15%, rgba(2, 132, 199, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(30, 58, 138, 0.03) 0%, transparent 40%),
+        linear-gradient(rgba(226, 232, 240, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(226, 232, 240, 0.3) 1px, transparent 1px) !important;
+    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px !important;
+}
+
+/* Sidebar Institutional Styling */
+[data-testid="stSidebar"] {
+    background-color: #F8FAFC !important;
+    border-right: 1px solid #E2E8F0 !important;
+}
+
+/* Metric Cards - Clean White Panels */
+[data-testid="stMetric"], div[style*="border"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Metric Labels */
+[data-testid="stMetricLabel"] {
+    color: #475569 !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+}
+
+/* Deep Blue Monospace Metric Values */
+[data-testid="stMetricValue"], div[style*="font-size: 2"] {
+    color: #0284C7 !important;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+}
+</style>
+''', unsafe_allow_html=True)
+import streamlit as st
+st.markdown('''
+<style>
 /* Base Portal Background */
 .stApp {
     background-color: #FAFAFA !important;
