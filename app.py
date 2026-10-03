@@ -1,4 +1,47 @@
 import streamlit as st
+st.markdown('''
+<style>
+/* Reset container background */
+.stApp {
+    background-color: #FFFFFF;
+}
+
+/* Metric Container Light Cards */
+[data-testid="stMetric"], div[data-testid="metric-container"], .metric-card {
+    background-color: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #64748B !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #0F172A !important;
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+}
+
+/* Status banners */
+.stAlert {
+    border-radius: 6px !important;
+}
+
+/* Sidebar clean border */
+[data-testid="stSidebar"] {
+    background-color: #F8FAFC !important;
+    border-right: 1px solid #E2E8F0 !important;
+}
+</style>
+''', unsafe_allow_html=True)
+import streamlit as st
 import json, os, sqlite3
 import pandas as pd
 from datetime import datetime
@@ -36,7 +79,7 @@ def log_event(disease, mondo_id, tfi_score, event_type):
 
 init_audit_db()
 
-st.set_page_config(page_title="Cross-Species Translational Fidelity Atlas", layout="wide")
+st.set_page_config(page_title='Cross-Species Atlas', layout='wide')
 
 st.markdown("""
     <style>
@@ -82,10 +125,10 @@ if nav == "Single Disease Deep-Dive":
         try:
             matched_disease = execute_on_demand_pipeline(user_query)
         except (BioinformaticsValidationError, ValueError) as e:
-            st.error(f"❌ Bioinformatics Validation Error: {str(e)}")
+            st.error(f" Bioinformatics Validation Error: {str(e)}")
             st.stop()
         except Exception as e:
-            st.error(f"❌ Pipeline Execution Error: {str(e)}")
+            st.error(f" Pipeline Execution Error: {str(e)}")
             st.stop()
 
     disease = matched_disease
@@ -99,12 +142,12 @@ if nav == "Single Disease Deep-Dive":
 
     c_col1, c_col2, c_col3 = st.columns([2, 1, 1])
     with c_col1:
-        st.success(f"**⚡ Status:** Active Payload Loaded for `{disease['disease']}`")
+        st.success(f"** Status:** Active Payload Loaded for `{disease['disease']}`")
     with c_col2:
-        if st.download_button("📄 Download PDF Report", pdf_bytes, f"{disease['disease']}_TFI_Report.pdf", "application/pdf"):
+        if st.download_button(" Download PDF Report", pdf_bytes, f"{disease['disease']}_TFI_Report.pdf", "application/pdf"):
             log_event(disease["disease"], ont.get("disease_id"), disease.get("composite_tfi"), "PDF_REPORT_EXPORT")
     with c_col3:
-        if st.download_button("📊 Download Gene Matrix CSV", csv_bytes, f"{disease['disease']}_target_genes.csv", "text/csv"):
+        if st.download_button(" Download Gene Matrix CSV", csv_bytes, f"{disease['disease']}_target_genes.csv", "text/csv"):
             log_event(disease["disease"], ont.get("disease_id"), disease.get("composite_tfi"), "CSV_MATRIX_EXPORT")
 
     col1, col2, col3, col4 = st.columns(4)
@@ -157,10 +200,10 @@ elif nav == "Community Provenance Submission":
                 "species_ncbi_id": ncbi
             })
             log_event(f"Submission {sub_id}", mondo, 0.0, "COMMUNITY_SUBMISSION")
-            st.success(f"✅ Submission Saved to Database! Submission ID: `{sub_id}`")
+            st.success(f" Submission Saved to Database! Submission ID: `{sub_id}`")
 
 elif nav == "Admin Curation Queue":
-    st.header("🔒 Admin Curation Queue")
+    st.header(" Admin Curation Queue")
     
     if "admin_authenticated" not in st.session_state:
         st.session_state["admin_authenticated"] = False
