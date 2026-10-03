@@ -3,12 +3,12 @@ st.markdown('''
 <style>
 /* Reset container background */
 .stApp {
-    background-color: #0F172A;
+    background-color: #334155;
 }
 
 /* Metric Container Light Cards */
 [data-testid="stMetric"], div[data-testid="metric-container"], .metric-card {
-    background-color: #0F172A !important;
+    background-color: #334155 !important;
     border: 1px solid #E2E8F0 !important;
     border-radius: 6px !important;
     padding: 12px 16px !important;
@@ -36,7 +36,7 @@ st.markdown('''
 
 /* Sidebar clean border */
 [data-testid="stSidebar"] {
-    background-color: #0F172A !important;
+    background-color: #334155 !important;
     border-right: 1px solid #E2E8F0 !important;
 }
 </style>
@@ -83,12 +83,12 @@ st.markdown('''
 <style>
 /* Main app white background */
 .stApp {
-    background-color: #FFFFFF !important;
+    background-color: #334155 !important;
 }
 
 /* Streamlit Native Metric Cards & Custom Container Cards */
 [data-testid="stMetric"], div[data-testid="metric-container"], .metric-card, .css-1r6slb0, .css-1wrcr25 {
-    background-color: #FFFFFF !important;
+    background-color: #334155 !important;
     border: 1px solid #E2E8F0 !important;
     border-radius: 8px !important;
     padding: 16px !important;
@@ -113,10 +113,43 @@ st.markdown('''
 
 /* Custom HTML card overrides inside st.markdown */
 div[style*="background-color"] {
-    background-color: #FFFFFF !important;
+    background-color: #334155 !important;
     color: #0F172A !important;
     border: 1px solid #E2E8F0 !important;
     border-radius: 8px !important;
+}
+</style>
+''', unsafe_allow_html=True)
+st.markdown('''
+<style>
+/* App background reset */
+.stApp, [data-testid="stAppViewContainer"] {
+    background-color: #FFFFFF !important;
+}
+
+/* Sidebar light reset */
+[data-testid="stSidebar"], section[data-testid="stSidebar"] {
+    background-color: #F8FAFC !important;
+    border-right: 1px solid #E2E8F0 !important;
+}
+
+/* Force any custom HTML card container to white background */
+div[style*="background"], div[style*="background-color"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    border-radius: 8px !important;
+}
+
+/* Force dark titles and deep blue percentage values */
+div[style*="color: #"], div[style*="color:#"], p, span, h1, h2, h3 {
+    color: #0F172A;
+}
+
+/* Target deep blue text for numbers and scores */
+.metric-value, [data-testid="stMetricValue"] {
+    color: #1E3A8A !important;
+    font-weight: 800 !important;
 }
 </style>
 ''', unsafe_allow_html=True)
@@ -125,9 +158,9 @@ st.set_page_config(page_title='Cross-Species Atlas', layout='wide')
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
-    html, body, [class*="css"] { font-family: 'IBM Plex Sans', -apple-system, sans-serif; color: #E7ECF5; background-color: #0F172A; }
+    html, body, [class*="css"] { font-family: 'IBM Plex Sans', -apple-system, sans-serif; color: #E7ECF5; background-color: #334155; }
     code, pre, .stDataFrame, [data-testid="stMetricValue"] { font-family: 'IBM Plex Mono', monospace !important; }
-    [data-testid="stMetric"], .stDataFrame { background-color: #0F172A !important; border: 1px solid #24304A !important; border-radius: 4px !important; }
+    [data-testid="stMetric"], .stDataFrame { background-color: #334155 !important; border: 1px solid #24304A !important; border-radius: 4px !important; }
     [data-testid="stMetricValue"] { color: #4FD1C5 !important; font-weight: 600; }
     </style>
 """, unsafe_allow_html=True)
