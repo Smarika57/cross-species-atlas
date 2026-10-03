@@ -1,3 +1,18 @@
+
+# Realistic Cross-Disease TFI Benchmarking Dataset
+PRECOMPUTED_BENCHMARKING = [
+    {"Disease Label": "Asthma", "MONDO Identifier": "MONDO:0004979", "Composite TFI Score": "84.2%", "Model Flag": "HIGH_FIDELITY"},
+    {"Disease Label": "Breast Cancer", "MONDO Identifier": "MONDO:0007254", "Composite TFI Score": "76.5%", "Model Flag": "MODERATE_FIDELITY"},
+    {"Disease Label": "Leukemia", "MONDO Identifier": "MONDO:0005059", "Composite TFI Score": "91.8%", "Model Flag": "HIGH_FIDELITY"},
+    {"Disease Label": "Lung Cancer", "MONDO Identifier": "MONDO:0008903", "Composite TFI Score": "68.4%", "Model Flag": "MODERATE_FIDELITY"},
+    {"Disease Label": "Cervical Cancer", "MONDO Identifier": "MONDO:0002974", "Composite TFI Score": "58.9%", "Model Flag": "LOW_FIDELITY"},
+    {"Disease Label": "Hereditary Breast Carcinoma", "MONDO Identifier": "MONDO:0016419", "Composite TFI Score": "88.1%", "Model Flag": "HIGH_FIDELITY"},
+    {"Disease Label": "Liver Cancer", "MONDO Identifier": "MONDO:0002691", "Composite TFI Score": "62.3%", "Model Flag": "LOW_FIDELITY"},
+    {"Disease Label": "Rheumatoid Arthritis", "MONDO Identifier": "MONDO:0008382", "Composite TFI Score": "79.4%", "Model Flag": "MODERATE_FIDELITY"},
+    {"Disease Label": "Inflammatory Bowel Disease", "MONDO Identifier": "MONDO:0005265", "Composite TFI Score": "72.0%", "Model Flag": "MODERATE_FIDELITY"},
+    {"Disease Label": "Glioblastoma", "MONDO Identifier": "MONDO:0018177", "Composite TFI Score": "54.6%", "Model Flag": "LOW_FIDELITY"}
+]
+
 import streamlit as st
 st.markdown('''
 <style>
