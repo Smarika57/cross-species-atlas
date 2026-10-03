@@ -1,0 +1,7 @@
+[theme]
+base = "light"
+primaryColor = "#2563EB"              # Professional Medical/Bioinformatics Blue
+backgroundColor = "#FAFAFA"           # Clean Off-White Background
+secondaryBackgroundColor = "#FFFFFF"  # Pure White Cards/Sidebar
+textColor = "#0F172A"                 # Deep Slate High-Contrast Text
+font = "sans serif"
