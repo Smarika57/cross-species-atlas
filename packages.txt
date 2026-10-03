@@ -1,0 +1,4 @@
+default-jre
+openjdk-17-jre-headless
+graphviz
+procps
