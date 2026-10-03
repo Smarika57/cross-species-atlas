@@ -1,6 +1,109 @@
 import streamlit as st
 st.markdown('''
 <style>
+/* Base Portal Background */
+.stApp {
+    background-color: #FAFAFA !important;
+}
+
+/* Sidebar Institutional Styling */
+[data-testid="stSidebar"] {
+    background-color: #F1F5F9 !important;
+    border-right: 1px solid #CBD5E1 !important;
+}
+
+/* Header Container Adjustments */
+header[data-testid="stHeader"] {
+    background-color: #FAFAFA !important;
+}
+
+/* Metric Cards - Dense NCBI Style */
+[data-testid="stMetric"], div[style*="border"] {
+    background-color: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 4px !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Metric Labels */
+[data-testid="stMetricLabel"] {
+    color: #475569 !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+}
+
+/* Monospace Scientific Values */
+[data-testid="stMetricValue"], div[style*="font-size: 2"] {
+    color: #0F172A !important;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+}
+
+/* Clean Form Input Container */
+[data-testid="stForm"], div[data-testid="stVerticalBlock"] > div[style*="background"] {
+    background-color: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 6px !important;
+}
+
+/* Dataframe Clinical Formatting */
+[data-testid="stDataFrame"] {
+    border: 1px solid #CBD5E1 !important;
+    border-radius: 4px !important;
+}
+
+/* Table Header Customization */
+div[data-testid="stTable"] table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+div[data-testid="stTable"] th {
+    background-color: #1E293B !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+}
+
+div[data-testid="stTable"] td {
+    padding: 8px 12px !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    font-size: 0.85rem !important;
+}
+
+/* Button Styling (NCBI Action Primary) */
+.stButton > button {
+    background-color: #0284C7 !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    border-radius: 4px !important;
+    border: none !important;
+    padding: 6px 16px !important;
+}
+
+.stButton > button:hover {
+    background-color: #0369A1 !important;
+}
+</style>
+''', unsafe_allow_html=True)
+st.markdown('''
+<div style="background-color: #0F172A; color: #FFFFFF; padding: 8px 20px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 3px solid #0284C7; font-family: sans-serif;">
+    <div>
+        <strong style="color: #38BDF8;">NIH / NCBI / FAIR Data Portal</strong> &nbsp;|&nbsp; <span>Cross-Species Translational Fidelity Engine</span>
+    </div>
+    <div>
+        <span style="background-color: #1E293B; padding: 2px 8px; border-radius: 3px; font-family: monospace; color: #38BDF8;">v1.4.2</span>
+    </div>
+</div>
+''', unsafe_allow_html=True)
+import streamlit as st
+st.markdown('''
+<style>
 /* App White Background */
 .stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
     background-color: #FFFFFF !important;
