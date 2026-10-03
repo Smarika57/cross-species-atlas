@@ -3,12 +3,12 @@ st.markdown('''
 <style>
 /* Reset container background */
 .stApp {
-    background-color: #FFFFFF;
+    background-color: #0F172A;
 }
 
 /* Metric Container Light Cards */
 [data-testid="stMetric"], div[data-testid="metric-container"], .metric-card {
-    background-color: #F8FAFC !important;
+    background-color: #0F172A !important;
     border: 1px solid #E2E8F0 !important;
     border-radius: 6px !important;
     padding: 12px 16px !important;
@@ -16,7 +16,7 @@ st.markdown('''
 }
 
 [data-testid="stMetricLabel"] {
-    color: #64748B !important;
+    color: #0F172A !important;
     font-size: 0.85rem !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
@@ -36,7 +36,7 @@ st.markdown('''
 
 /* Sidebar clean border */
 [data-testid="stSidebar"] {
-    background-color: #F8FAFC !important;
+    background-color: #0F172A !important;
     border-right: 1px solid #E2E8F0 !important;
 }
 </style>
@@ -79,14 +79,55 @@ def log_event(disease, mondo_id, tfi_score, event_type):
 
 init_audit_db()
 
+st.markdown('''
+<style>
+/* Main app white background */
+.stApp {
+    background-color: #FFFFFF !important;
+}
+
+/* Streamlit Native Metric Cards & Custom Container Cards */
+[data-testid="stMetric"], div[data-testid="metric-container"], .metric-card, .css-1r6slb0, .css-1wrcr25 {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Metric Label Header */
+[data-testid="stMetricLabel"] {
+    color: #475569 !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Metric Value: Bold Deep Blue Accent */
+[data-testid="stMetricValue"] {
+    color: #1E3A8A !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+}
+
+/* Custom HTML card overrides inside st.markdown */
+div[style*="background-color"] {
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+}
+</style>
+''', unsafe_allow_html=True)
 st.set_page_config(page_title='Cross-Species Atlas', layout='wide')
 
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
-    html, body, [class*="css"] { font-family: 'IBM Plex Sans', -apple-system, sans-serif; color: #E7ECF5; background-color: #0B1220; }
+    html, body, [class*="css"] { font-family: 'IBM Plex Sans', -apple-system, sans-serif; color: #E7ECF5; background-color: #0F172A; }
     code, pre, .stDataFrame, [data-testid="stMetricValue"] { font-family: 'IBM Plex Mono', monospace !important; }
-    [data-testid="stMetric"], .stDataFrame { background-color: #131B2E !important; border: 1px solid #24304A !important; border-radius: 4px !important; }
+    [data-testid="stMetric"], .stDataFrame { background-color: #0F172A !important; border: 1px solid #24304A !important; border-radius: 4px !important; }
     [data-testid="stMetricValue"] { color: #4FD1C5 !important; font-weight: 600; }
     </style>
 """, unsafe_allow_html=True)
