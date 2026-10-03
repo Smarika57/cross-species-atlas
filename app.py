@@ -1,6 +1,24 @@
 import streamlit as st
 st.markdown('''
 <style>
+.stApp {
+    background-color: #FAFAFA !important;
+    background-image: 
+        radial-gradient(circle at 15% 15%, rgba(2, 132, 199, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(30, 58, 138, 0.04) 0%, transparent 40%),
+        linear-gradient(rgba(226, 232, 240, 0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(226, 232, 240, 0.4) 1px, transparent 1px) !important;
+    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px !important;
+}
+
+.block-container {
+    padding-top: 2rem !important;
+}
+</style>
+''', unsafe_allow_html=True)
+import streamlit as st
+st.markdown('''
+<style>
 /* Remove default margin padding */
 .block-container {
     padding-top: 2rem !important;
